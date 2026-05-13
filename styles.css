@@ -239,10 +239,18 @@ h1 {
   border-bottom: 1px solid var(--border-soft);
 }
 
+.heading-title-group {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .section-heading h2 {
   margin: 0;
   font-size: 17px;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 .section-heading span,
@@ -255,15 +263,39 @@ h1 {
   padding-bottom: 12px;
 }
 
+.back-button {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--control);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.back-button:hover,
+.back-button:focus-visible {
+  color: var(--text);
+  outline: none;
+  border-color: color-mix(in srgb, var(--accent) 52%, var(--border));
+}
+
+.is-hidden {
+  display: none;
+}
+
 .novel-list {
   display: grid;
   gap: 8px;
   padding-top: 14px;
 }
 
-.novel-card {
+.novel-card,
+.episode-card {
   width: 100%;
-  min-height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -281,8 +313,18 @@ h1 {
     transform 160ms ease;
 }
 
+.novel-card {
+  min-height: 76px;
+}
+
+.episode-card {
+  min-height: 68px;
+}
+
 .novel-card:hover,
-.novel-card:focus-visible {
+.novel-card:focus-visible,
+.episode-card:hover,
+.episode-card:focus-visible {
   border-color: color-mix(in srgb, var(--accent) 72%, var(--border));
   background: color-mix(in srgb, var(--surface-strong) 88%, var(--accent) 12%);
   outline: none;
@@ -294,6 +336,23 @@ h1 {
   margin-bottom: 0;
   font-size: 17px;
   font-weight: 720;
+  letter-spacing: 0;
+}
+
+.episode-number {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--accent-strong);
+  font-size: 12px;
+  font-weight: 760;
+  letter-spacing: 0;
+}
+
+.episode-title {
+  display: block;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: 0;
 }
 
@@ -319,6 +378,13 @@ h1 {
 .recent-title {
   margin: 16px 0 7px;
   font-size: 16px;
+  font-weight: 700;
+}
+
+.recent-episode {
+  margin: 0 0 9px;
+  color: var(--accent-strong);
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -402,6 +468,11 @@ h1 {
 
   .novel-card {
     min-height: 72px;
+    padding: 14px;
+  }
+
+  .episode-card {
+    min-height: 64px;
     padding: 14px;
   }
 }

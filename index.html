@@ -50,7 +50,13 @@
       <div class="content-grid">
         <section class="panel works-panel" id="works" aria-labelledby="worksTitle">
           <div class="section-heading">
-            <h2 id="worksTitle" data-i18n="worksTitle">Novel List</h2>
+            <div class="heading-title-group">
+              <button class="back-button is-hidden" type="button" id="backToWorks">
+                <span aria-hidden="true">‹</span>
+                <span data-i18n="backToWorks">Works</span>
+              </button>
+              <h2 id="worksTitle" data-i18n="worksTitle">Novel List</h2>
+            </div>
             <span data-i18n="worksCount">6 works</span>
           </div>
 
@@ -67,6 +73,7 @@
               <h2 id="recentTitle" data-i18n="recentTitle">Recently Read</h2>
             </div>
             <p class="recent-title" id="recentTitleText">Sentences Under Moonlight</p>
+            <p class="recent-episode" id="recentEpisodeText">Episode 01</p>
             <p class="muted" data-i18n="recentMeta">Your last position is saved in this browser.</p>
             <button class="resume-button" type="button" data-i18n="resumeButton">Continue</button>
           </section>
