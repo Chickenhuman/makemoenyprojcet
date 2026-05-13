@@ -2,7 +2,12 @@ const STORAGE_KEYS = {
   language: "novelSiteLanguage",
   theme: "novelSiteTheme",
   recentNovel: "novelSiteRecentNovel",
+  defaultsVersion: "novelSiteDefaultsVersion",
 };
+
+const DEFAULT_LANGUAGE = "en";
+const DEFAULT_THEME = "dark";
+const DEFAULTS_VERSION = "en-dark-v1";
 
 const translations = {
   ko: {
@@ -120,11 +125,16 @@ const themeToggle = document.querySelector("#themeToggle");
 const novelList = document.querySelector("#novelList");
 const recentTitleText = document.querySelector("#recentTitleText");
 
-let currentLanguage = localStorage.getItem(STORAGE_KEYS.language) || "ko";
-let currentTheme = localStorage.getItem(STORAGE_KEYS.theme) || "dark";
+if (localStorage.getItem(STORAGE_KEYS.defaultsVersion) !== DEFAULTS_VERSION) {
+  localStorage.setItem(STORAGE_KEYS.language, DEFAULT_LANGUAGE);
+  localStorage.setItem(STORAGE_KEYS.defaultsVersion, DEFAULTS_VERSION);
+}
+
+let currentLanguage = localStorage.getItem(STORAGE_KEYS.language) || DEFAULT_LANGUAGE;
+let currentTheme = localStorage.getItem(STORAGE_KEYS.theme) || DEFAULT_THEME;
 
 function getDictionary() {
-  return translations[currentLanguage] || translations.ko;
+  return translations[currentLanguage] || translations[DEFAULT_LANGUAGE];
 }
 
 function setTheme(theme) {
@@ -135,7 +145,7 @@ function setTheme(theme) {
 }
 
 function setLanguage(language) {
-  currentLanguage = translations[language] ? language : "ko";
+  currentLanguage = translations[language] ? language : DEFAULT_LANGUAGE;
   document.documentElement.lang = currentLanguage;
   languageSelect.value = currentLanguage;
   localStorage.setItem(STORAGE_KEYS.language, currentLanguage);

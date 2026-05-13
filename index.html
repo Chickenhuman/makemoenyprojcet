@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko" data-theme="dark">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,24 +9,24 @@
   <body>
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="#" aria-label="미정 홈">미정</a>
+        <a class="brand" href="#" aria-label="미정 home">미정</a>
         <nav class="main-nav" aria-label="Primary">
-          <a href="#works" data-i18n="navWorks">작품</a>
-          <a href="#recent" data-i18n="navRecent">최근 읽은 작품</a>
+          <a href="#works" data-i18n="navWorks">Works</a>
+          <a href="#recent" data-i18n="navRecent">Recently Read</a>
         </nav>
         <div class="controls" aria-label="Site settings">
           <label class="select-wrap">
-            <span class="sr-only" data-i18n="languageLabel">언어</span>
+            <span class="sr-only" data-i18n="languageLabel">Language</span>
             <select id="languageSelect" aria-label="Language">
               <option value="ko">한국어</option>
-              <option value="en">English</option>
+              <option value="en" selected>English</option>
               <option value="ja">日本語</option>
               <option value="es">Español</option>
             </select>
           </label>
           <button class="theme-toggle" type="button" id="themeToggle" aria-label="Change theme">
             <span class="theme-icon" aria-hidden="true"></span>
-            <span data-i18n="themeToggle">화이트 모드</span>
+            <span data-i18n="themeToggle">Light Mode</span>
           </button>
         </div>
       </div>
@@ -34,24 +34,24 @@
 
     <main class="page-shell">
       <section class="ad-slot ad-slot-top" aria-label="Advertisement">
-        <span data-i18n="topAd">광고 배너</span>
+        <span data-i18n="topAd">Ad Banner</span>
       </section>
 
       <section class="intro-strip" aria-labelledby="pageTitle">
         <div>
-          <p class="eyebrow" data-i18n="eyebrow">무료 웹소설</p>
-          <h1 id="pageTitle" data-i18n="pageTitle">작품 선택</h1>
+          <p class="eyebrow" data-i18n="eyebrow">Free Web Novels</p>
+          <h1 id="pageTitle" data-i18n="pageTitle">Choose a Novel</h1>
         </div>
         <p data-i18n="pageCopy">
-          읽고 싶은 작품을 고르면 바로 본문으로 이동합니다.
+          Select a title and continue straight to the story.
         </p>
       </section>
 
       <div class="content-grid">
         <section class="panel works-panel" id="works" aria-labelledby="worksTitle">
           <div class="section-heading">
-            <h2 id="worksTitle" data-i18n="worksTitle">작품 목록</h2>
-            <span data-i18n="worksCount">6개 작품</span>
+            <h2 id="worksTitle" data-i18n="worksTitle">Novel List</h2>
+            <span data-i18n="worksCount">6 works</span>
           </div>
 
           <div class="novel-list" id="novelList"></div>
@@ -59,16 +59,16 @@
 
         <aside class="side-column" aria-label="Sidebar">
           <section class="ad-slot ad-slot-side" aria-label="Advertisement">
-            <span data-i18n="sideAd">광고</span>
+            <span data-i18n="sideAd">Ad</span>
           </section>
 
           <section class="panel recent-panel" id="recent" aria-labelledby="recentTitle">
             <div class="section-heading compact">
-              <h2 id="recentTitle" data-i18n="recentTitle">최근 읽은 작품</h2>
+              <h2 id="recentTitle" data-i18n="recentTitle">Recently Read</h2>
             </div>
-            <p class="recent-title" id="recentTitleText">달빛 아래의 문장</p>
-            <p class="muted" data-i18n="recentMeta">마지막 위치가 이 브라우저에 저장됩니다.</p>
-            <button class="resume-button" type="button" data-i18n="resumeButton">이어보기</button>
+            <p class="recent-title" id="recentTitleText">Sentences Under Moonlight</p>
+            <p class="muted" data-i18n="recentMeta">Your last position is saved in this browser.</p>
+            <button class="resume-button" type="button" data-i18n="resumeButton">Continue</button>
           </section>
         </aside>
       </div>
