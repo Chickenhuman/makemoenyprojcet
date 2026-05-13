@@ -79,6 +79,26 @@
           </section>
         </aside>
       </div>
+
+      <section class="reader-view is-hidden" id="readerView" aria-labelledby="readerTitle">
+        <div class="reader-menu-shell" id="readerMenuShell">
+          <button class="reader-menu-toggle" type="button" id="readerMenuToggle">
+            <span aria-hidden="true">☰</span>
+            <span data-i18n="viewerMenu">Menu</span>
+          </button>
+          <nav class="reader-menu" aria-label="Reader navigation">
+            <button type="button" id="readerPrev" data-i18n="previousEpisode">Previous</button>
+            <button type="button" id="readerList" data-i18n="episodeList">Episode List</button>
+            <button type="button" id="readerNext" data-i18n="nextEpisode">Next</button>
+          </nav>
+        </div>
+
+        <article class="reader-paper">
+          <p class="reader-kicker" id="readerNovelTitle">Sentences Under Moonlight</p>
+          <h1 id="readerTitle">Episode 01 · A Strange Beginning</h1>
+          <div class="reader-body" id="readerBody"></div>
+        </article>
+      </section>
     </main>
 
     <script src="app.js"></script>
