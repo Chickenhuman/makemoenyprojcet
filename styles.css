@@ -475,7 +475,7 @@ h1 {
 .reader-menu-shell {
   position: fixed;
   right: 22px;
-  bottom: 22px;
+  top: 94px;
   z-index: 40;
   display: grid;
   justify-items: end;
@@ -626,7 +626,7 @@ h1 {
 
   .reader-menu-shell {
     right: 14px;
-    bottom: 14px;
+    top: 78px;
   }
 
   .reader-menu {
